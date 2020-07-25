@@ -664,7 +664,7 @@ radiusは外した*/
   /* フォーム form 開始*/
   /* レスポンシブ対応時、widthを外す */
   /* 調整　必須 */
-  .required8{margin-left: -1px;}
+  .required8{margin-left: -5.5px;}
   @media screen and (max-width:500px) {
     form {
       width: 70%;
