@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ja">
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- ファビコン -->
+  <link rel="shortcut icon" href="favicon.ico" />
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 文字フォント -->
+  <link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet" />
+  <!-- フォントAWSOME -->
+  <link rel=”stylesheet” href=”https://use.fontawesome.com/releases/v5.1.0/css/all.css“>
+  <!-- フォントAWSOME -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+  <!-- // Links to the libraries needed -->
+
+  <link rel="stylesheet" href="bxslider-4-4.2.12/dist/jquery.bxslider.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="bxslider-4-4.2.12/dist/jquery.bxslider.min.js"></script>
+
+  <title>フォーム【哲学塾】</title>
+  <script src="https://kit.fontawesome.com/3efcf3421b.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body id="form">
+  <!-- LOADING読み込み 場所は<body>の直後か直前-->
+  <div id="my-spinner" class="box">
+    <!-- type1 〜 type8 はお好みで -->
+    <div class="spinner type1">
+      <span>Loading...</span>
+    </div>
+  </div>
+
+  <header>
+    <!-- デスクトップサイズ用のナビ 開始-->
+    <nav class="global-nav " id="desktop-nav">
+      <ul class="parent-nav ">
+        <li class="logo" id="logo">
+          <a href="index.html ">
+            <img src=" img/tetsugaku.jpg " width="44 " height="44 " alt="logo "></a>
+        </li>
+        <li>
+          <a href="about.html">哲学の歴史</a>
+          <!-- 子要素 始まり-->
+          <!-- <ul class="child-nav ">
+            <li>
+              <a href="about.html">哲学とは</a>
+            </li>
+            <li>
+              <a href="about.html#kant">イマヌエル・カント</a>
+            </li>
+            <li>
+              <a href="about.html#nietzche">フリードリヒ・ニーチェ</a>
+            </li>
+            <li>
+              <a href="about.html#decartes">ルネ・デカルテ</a>
+            </li>
+            <li>
+              <a href="about.html#stuarte">ジョン・スチュアート・ミル</a>
+            </li>
+            <li>
+              <a href="about.html#rousseau ">ジャン＝ジャック・ルソー</a>
+            </li>
+          </ul> -->
+          <!-- 子要素終わり -->
+        </li>
+        <li>
+          <a href="https://kantphilosophy.hatenablog.com/" target="_blank">ブログ</a>
+          <!-- <ul class="child-nav ">
+            <li>
+              <a href="https://kantphilosophy.hatenablog.com/entry/2020/06/27/223745 " target="_blank">第一回</a>
+            </li>
+            <li>
+              <a href="https://kantphilosophy.hatenablog.com/entry/2020/06/27/224235 " target="_blank">第二回</a>
+            </li>
+            <li>
+              <a href="https://kantphilosophy.hatenablog.com/entry/2020/06/27/224621" target="_blank">第三回</a>
+            </li>
+            <li>
+              <a href="https://kantphilosophy.hatenablog.com/entry/2020/06/28/193323 " target="_blank">第四回</a>
+            </li>
+            <li>
+              <a href="https://kantphilosophy.hatenablog.com/entry/2020/07/03/225928 " target="_blank">第五回</a>
+            </li>
+            <li>
+              <a href="https://kantphilosophy.hatenablog.com/entry/2020/07/06/211136 " target="_blank">第六回</a>
+            </li>
+          </ul> -->
+        </li>
+        <li>
+          <a href="form.html">フォーム</a>
+          <!-- <ul class="child-nav ">
+            <li>
+              <a href="form.html">哲学塾入会申し込み</a>
+            </li> -->
+        </li>
+
+        <!-- <li class="fb-ig">
+          <a href="https://www.facebook.com/%E5%93%B2%E5%AD%A6cafe-269427913406928/" target="_blank"><img src="img/fb-logo.png" height="33" width="33" alt=""></a>
+        </li>
+
+        <li class="fb-ig">
+          <a href="https://www.instagram.com/explore/tags/%E3%81%84%E3%81%BE%E4%B8%96%E7%95%8C%E3%81%AE%E5%93%B2%E5%AD%A6%E8%80%85%E3%81%8C%E8%80%83%E3%81%88%E3%81%A6%E3%81%84%E3%82%8B%E3%81%93%E3%81%A8/?hl=ja" target="_blank"><img src="img/ig-logo.png" height="33" width="33" alt=""></a>
+        </li> -->
+
+      </ul>
+      </ul>
+    </nav>
+    <!-- デスクトップサイズ用のナビ 終了-->
+
+    <nav class="hamburger-nav" id="hamburger-nav">
+      <!-- ハンバーガーアイコン始まり -->
+      <!-- id.nav-toggle.nav-toggle -->
+      <!-- div*3 -->
+      <button type="button" id="nav-toggle" class="nav-toggle">
+            <div></div>
+            <div></div>
+            <div></div>
+        </button>
+      <!-- ナビメニュー スマホ・タブレットサイズ版限定-->
+      <!-- ul#nav-list.nav-list -->
+      <!-- li>a -->
+      <nav class="nav-list-wrapper">
+        <ul id="nav-list" class="nav-list parent-nav ">
+
+          <li>
+            <!-- 哲学の歴史始まり -->
+            <label for=""><button type="button" >哲学の歴史</button><i class="fas fa-chevron-down" id="checkbox1"></i></label>
+
+            <input type="checkbox" name="philosophy-history">
+            <!-- 子要素 始まり-->
+            <ul class="child-nav ">
+              <li>
+                <a href="about.html">哲学とは</a>
+              </li>
+              <li>
+                <a href="about.html#kant">イマヌエル・カント</a>
+              </li>
+              <li>
+                <a href="about.html#nietzche">フリードリヒ・ニーチェ</a>
+              </li>
+              <li>
+                <a href="about.html#decartes">ルネ・デカルテ</a>
+              </li>
+              <li>
+                <a href="about.html#stuarte">ジョン・スチュアート・ミル</a>
+              </li>
+              <li>
+                <a href="about.html#rousseau ">ジャン＝ジャック・ルソー</a>
+              </li>
+            </ul>
+            <!-- 子要素終わり -->
+            <!-- 哲学の歴史終わり-->
+          </li>
+          </li>
+          <!-- ブログ始まり -->
+          <li>
+            <label for=""><button type="button">ブログ</button><i class="fas fa-chevron-down" id="checkbox2"></i></label><input type="checkbox" name="blog">
+            <!-- 子要素 -->
+            <ul class="child-nav ">
+              <li>
+                <a href="https://kantphilosophy.hatenablog.com/entry/2020/06/27/223745 ">第一回</a>
+              </li>
+              <li>
+                <a href="https://kantphilosophy.hatenablog.com/entry/2020/06/27/224235 ">第二回</a>
+              </li>
+              <li>
+                <a href="https://kantphilosophy.hatenablog.com/entry/2020/06/27/224621 ">第三回</a>
+              </li>
+              <li>
+                <a href="https://kantphilosophy.hatenablog.com/entry/2020/06/28/193323 ">第四回</a>
+              </li>
+              <li>
+                <a href="https://kantphilosophy.hatenablog.com/entry/2020/07/03/225928 ">第五回</a>
+              </li>
+              <li>
+                <a href="https://kantphilosophy.hatenablog.com/entry/2020/07/06/211136 ">第六回</a>
+              </li>
+            </ul>
+            <!-- 子要素 -->
+          </li>
+
+          <!-- ブログ終わり -->
+
+          <!-- フォーム始まり -->
+          <li>
+            <label for=" "><button type="button">フォーム</button><i class="fas fa-chevron-down" id="checkbox3"></i> </label> <input type="checkbox" name="form">
+            <ul class="child-nav ">
+              <li>
+                <a href="form.html">哲学塾入会申し込み</a>
+              </li>
+
+            </ul>
+          </li>
+          <!-- フォーム終わり -->
+
+          <!-- フェイスブック・インスタグラム始まり -->
+          <div class="fb-ig-logo ">
+            <div class="fb-ig ">
+              <a href="https://www.facebook.com/%E5%93%B2%E5%AD%A6cafe-269427913406928/ "><img src="img/fb-logo.png " height="33 " width="33 " alt=" "></a>
+            </div>
+            <div class="fb-ig ">
+              <a href="https://www.instagram.com/explore/tags/%E3%81%84%E3%81%BE%E4%B8%96%E7%95%8C%E3%81%AE%E5%93%B2%E5%AD%A6%E8%80%85%E3%81%8C%E8%80%83%E3%81%88%E3%81%A6%E3%81%84%E3%82%8B%E3%81%93%E3%81%A8/?hl=ja "><img src="img/ig-logo.png
+                  " height="33 " width="33 " alt=" "></a>
+            </div>
+            <!-- フェイスブック・インスタグラム終わり -->
+        </ul>
+      </nav>
+      <!-- ハンバーガーアイコン終了ー -->
+
+      <!-- ロゴアイコン -->
+      <div class="logo-nav-wrapper ">
+        <div class="logo ">
+          <a href="index.html ">
+            <img src=" img/tetsugaku.jpg " width="44 " height="44 " alt="logo "></a>
+        </div>
+        <!-- ロゴアイコン -->
+      </div>
+    </nav>
+  </header>
+
+  <h1>哲学塾へ入会しよう</h1>
+  <form>
+    <h2>入会フォーム</h2>
+    <div class="wrap-legend">
+      <legend>
+        <!-- 郵便番号で住所検索 開始-->
+        <label class="form-label ">郵便番号</label>
+        <span class="required"><small>必須</small></span>
+        <input id="zipcode" type="text " size="10 " maxlength="8 " onchange="javascript:getAddName(this.value)">
+        <!--callbackの譲受⇒ onchange="javascript:getAddName(this.value) -->
+        <button id="btn" class="search-address">検索</button>
+        <!-- クリックしてイベントを起こすためのボタン -->
+      </legend>
+
+      <legend>
+        <label class="form-label">都道府県 </label>
+        <span class=auto><small>自動</small></span>
+        <input id="add_prefecture" type="text" size="10">
+        <!-- 都道府県のインプットタグ -->
+      </legend>
+
+      <legend>
+        <label class="form-label">市区町村 </label>
+        <span class=auto><small>自動</small></span><input id="add_city" type="text" size="10">
+        <!-- 市区町村のインプットタグ -->
+      </legend>
+
+      <legend>
+        <label class="form-label">住所</label>
+        <span class=auto><small>自動</small></span>
+        <input id="add_address" type="text" size="10">
+        <!-- 住所のインプットタグ -->
+      </legend>
+
+      <legend>
+        <label class="form-label">番地</label>
+        <span class="required"><small>必須</small></span><input id="add_address" type="text" size="10">
+        <!-- 住所のインプットタグ -->
+      </legend>
+
+      <hr>
+      <legend for="name">
+        <label class="form-label">姓</label>
+        <span class="required"><small>必須</small></span>
+        <input type="name" class="name" required>
+      </legend>
+      <legend for="name">
+        <label class="form-label">名</label>
+        <span class="required"><small>必須</small></span>
+        <input type="name" class="name" required>
+      </legend>
+
+      <legend for="name">
+
+        <label class="form-label">姓カナ</label>
+        <span class="required"><small>必須</small></span>
+        <input type="name" class="name" required>
+      </legend>
+      <legend for="name">
+        <label class="form-label"> 名カナ</label> <span class=required><small>必須</small></span>
+        <input type="name" class="name" required>
+      </legend>
+      <hr>
+      <legend for="email">
+        <label class="form-label"> メール</label>
+
+        <span class="required"><small>必須</small></span>
+        <input type="email" size="15">
+      </legend>
+
+      <legend class="gender-legend">
+        <div class="wrapper-gender-label">
+        <label class="form-label"> 性別</label>
+        <span class="required required8"><small>必須</small></span>
+      </div>
+        <div class="gender">
+          <input type="radio" class="radio" id="boy" checked> <label for="pre" class="man">男</label>
+
+          <input type="radio" class="radio" id="girl">
+          <label for="deferred" class=woman>女</label>
+
+        </div>
+      </legend>
+
+      <legend>
+        <label class="form-label">入会目的</label>
+        <span class=auto><small>任意</small></span>
+
+        <select name=" whyjoin " id="whyjoin ">
+          <option  style="color:aliceblue;"value="選択肢０" class="first-option" disabled selected value>---選択してください---</option>
+          <option value="選択肢１">勉強のため</option>
+          <option value="選択肢２">暇つぶし</option>
+          <option value="選択肢３">その他</option>
+        </select>
+      </legend>
+      <hr>
+    </div>
+
+    <p><input type="checkbox" class="checkbox"><label for="">哲学塾規約の内容を確認の上で同意し申し込みます。<span class="cram-school"><a href="http://philosophy-japan.org/bulletin/%E8%91%97%E4%BD%9C%E6%A8%A9%E8%A6%8F%E5%AE%9A/" target="_blank">哲学塾規約</a></span></label></p>
+    <hr>
+    <div class="submit">
+      <input type="submit" value="送信する">
+    </div>
+
+    <p class="confirm-before-submit">入力内容をご確認の上、宜しければ「送信する」ボタンを押してください。</p>
+    <hr>
+    <h3></h3>
+    <p>下記指定の口座にお振込みください。<br><br>哲学銀行　ニーチェ支店（普通）010259㈱philosophyfever<br><br>お振込みに係る手数料は各自ご負担願います。</p>
+    <hr>
+    <h3>個人情報の取り扱いについて</h3>
+    <p>「哲学塾」会員お申込みの際にご登録いただきました個人情報につきまして、活動目的の範囲内で活用いたします。また、会員様ご本人の承諾を得ている場合、あるいは法令等で定めのある場合、目的以外での利用・提供は行いません。</p>
+    <!-- 郵便番号で住所検索 終了-->
+  </form>
+
+
+  <!-- <script src="script.js"></script> -->
+  <!-- JavaScriptファイル読み込み （bodyタグ終了直前の位置）-->
+
+  <script src="js/script.js "></script>
+  <footer>
+    <p><small>&copy;philisophyfever.LLC</small></p>
+  </footer>
+</body>
+
+</html>

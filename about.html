@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- ファビコン -->
+  <link rel="shortcut icon" href="favicon.ico" />
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet" />
+  <!-- フォントAWSOME -->
+  <link rel=”stylesheet” href=”https://use.fontawesome.com/releases/v5.1.0/css/all.css“>
+  <!-- フォントAWSOME -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+  <!-- // Links to the libraries needed -->
+
+  <link rel="stylesheet" href="bxslider-4-4.2.12/dist/jquery.bxslider.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="bxslider-4-4.2.12/dist/jquery.bxslider.min.js"></script>
+
+  <title>哲学の歴史【哲学塾】</title>
+
+</head>
+
+<body id="about">
+  <!-- LOADING読み込み 場所は<body>の直後か直前-->
+  <div id="my-spinner" class="box">
+    <!-- type1 〜 type8 はお好みで -->
+    <div class="spinner type1">
+      <span>Loading...</span>
+    <!-- </div>
+    <div class="loading">動画読み込み中
+    </div> -->
+  </div>
+
+  <header>
+    <!-- デスクトップサイズ用のナビ 開始-->
+    <nav class="global-nav " id="desktop-nav">
+      <ul class="parent-nav ">
+        <li class="logo" id="logo">
+          <a href="index.html ">
+            <img src=" img/tetsugaku.jpg " width="44 " height="44 " alt="logo "></a>
+        </li>
+        <li>
+          <a href="about.html">哲学の歴史</a>
+          <!-- 子要素 始まり-->
+          <!-- <ul class="child-nav ">
+            <li>
+              <a href="about.html">哲学とは</a>
+            </li>
+            <li>
+              <a href="about.html#kant">イマヌエル・カント</a>
+            </li>
+            <li>
+              <a href="about.html#nietzche">フリードリヒ・ニーチェ</a>
+            </li>
+            <li>
+              <a href="about.html#decartes">ルネ・デカルテ</a>
+            </li>
+            <li>
+              <a href="about.html#stuarte">ジョン・スチュアート・ミル</a>
+            </li>
+            <li>
+              <a href="about.html#rousseau ">ジャン＝ジャック・ルソー</a>
+            </li>
+          </ul> -->
+          <!-- 子要素終わり -->
+        </li>
+        <li>
+          <a href="https://kantphilosophy.hatenablog.com/" target="_blank">ブログ</a>
+          <!-- <ul class="child-nav ">
+            <li>
+              <a href="https://kantphilosophy.hatenablog.com/entry/2020/06/27/223745 " target="_blank">第一回</a>
+            </li>
+            <li>
+              <a href="https://kantphilosophy.hatenablog.com/entry/2020/06/27/224235 " target="_blank">第二回</a>
+            </li>
+            <li>
+              <a href="https://kantphilosophy.hatenablog.com/entry/2020/06/27/224621" target="_blank">第三回</a>
+            </li>
+            <li>
+              <a href="https://kantphilosophy.hatenablog.com/entry/2020/06/28/193323 " target="_blank">第四回</a>
+            </li>
+            <li>
+              <a href="https://kantphilosophy.hatenablog.com/entry/2020/07/03/225928 " target="_blank">第五回</a>
+            </li>
+            <li>
+              <a href="https://kantphilosophy.hatenablog.com/entry/2020/07/06/211136 " target="_blank">第六回</a>
+            </li>
+          </ul> -->
+        </li>
+        <li>
+          <a href="form.html">フォーム</a>
+          <!-- <ul class="child-nav ">
+            <li>
+              <a href="form.html">哲学塾入会申し込み</a>
+            </li> -->
+        </li>
+
+        <!-- <li class="fb-ig">
+          <a href="https://www.facebook.com/%E5%93%B2%E5%AD%A6cafe-269427913406928/" target="_blank"><img src="img/fb-logo.png" height="33" width="33" alt=""></a>
+        </li>
+
+        <li class="fb-ig">
+          <a href="https://www.instagram.com/explore/tags/%E3%81%84%E3%81%BE%E4%B8%96%E7%95%8C%E3%81%AE%E5%93%B2%E5%AD%A6%E8%80%85%E3%81%8C%E8%80%83%E3%81%88%E3%81%A6%E3%81%84%E3%82%8B%E3%81%93%E3%81%A8/?hl=ja" target="_blank"><img src="img/ig-logo.png" height="33" width="33" alt=""></a>
+        </li> -->
+
+      </ul>
+      </ul>
+    </nav>
+    <!-- デスクトップサイズ用のナビ 終了-->
+
+    <nav class="hamburger-nav" id="hamburger-nav">
+      <!-- ハンバーガーアイコン始まり -->
+      <!-- id.nav-toggle.nav-toggle -->
+      <!-- div*3 -->
+      <button type="button" id="nav-toggle" class="nav-toggle">
+            <div></div>
+            <div></div>
+            <div></div>
+        </button>
+      <!-- ナビメニュー スマホ・タブレットサイズ版限定-->
+      <!-- ul#nav-list.nav-list -->
+      <!-- li>a -->
+      <nav class="nav-list-wrapper">
+        <ul id="nav-list" class="nav-list parent-nav ">
+
+          <li>
+            <!-- 哲学の歴史始まり -->
+            <label for=""><button type="button" >哲学の歴史</button><i class="fas fa-chevron-down" id="checkbox1"></i></label>
+
+            <input type="checkbox" name="philosophy-history">
+            <!-- 子要素 始まり-->
+            <ul class="child-nav ">
+              <li>
+                <a href="about.html">哲学とは</a>
+              </li>
+              <li>
+                <a href="about.html#kant">イマヌエル・カント</a>
+              </li>
+              <li>
+                <a href="about.html#nietzche">フリードリヒ・ニーチェ</a>
+              </li>
+              <li>
+                <a href="about.html#decartes">ルネ・デカルテ</a>
+              </li>
+              <li>
+                <a href="about.html#stuarte">ジョン・スチュアート・ミル</a>
+              </li>
+              <li>
+                <a href="about.html#rousseau ">ジャン＝ジャック・ルソー</a>
+              </li>
+            </ul>
+            <!-- 子要素終わり -->
+            <!-- 哲学の歴史終わり-->
+          </li>
+          </li>
+          <!-- ブログ始まり -->
+          <li>
+            <label for=""><button type="button">ブログ</button><i class="fas fa-chevron-down" id="checkbox2"></i></label><input type="checkbox" name="blog">
+            <!-- 子要素 -->
+            <ul class="child-nav ">
+              <li>
+                <a href="https://kantphilosophy.hatenablog.com/entry/2020/06/27/223745 ">第一回</a>
+              </li>
+              <li>
+                <a href="https://kantphilosophy.hatenablog.com/entry/2020/06/27/224235 ">第二回</a>
+              </li>
+              <li>
+                <a href="https://kantphilosophy.hatenablog.com/entry/2020/06/27/224621 ">第三回</a>
+              </li>
+              <li>
+                <a href="https://kantphilosophy.hatenablog.com/entry/2020/06/28/193323 ">第四回</a>
+              </li>
+              <li>
+                <a href="https://kantphilosophy.hatenablog.com/entry/2020/07/03/225928 ">第五回</a>
+              </li>
+              <li>
+                <a href="https://kantphilosophy.hatenablog.com/entry/2020/07/06/211136 ">第六回</a>
+              </li>
+            </ul>
+            <!-- 子要素 -->
+          </li>
+
+          <!-- ブログ終わり -->
+
+          <!-- フォーム始まり -->
+          <li>
+            <label for=" "><button type="button">フォーム</button><i class="fas fa-chevron-down" id="checkbox3"></i> </label> <input type="checkbox" name="form">
+            <ul class="child-nav ">
+              <li>
+                <a href="form.html">哲学塾入会申し込み</a>
+              </li>
+
+            </ul>
+          </li>
+          <!-- フォーム終わり -->
+
+          <!-- フェイスブック・インスタグラム始まり -->
+          <div class="fb-ig-logo ">
+            <div class="fb-ig ">
+              <a href="https://www.facebook.com/%E5%93%B2%E5%AD%A6cafe-269427913406928/ "><img src="img/fb-logo.png " height="33 " width="33 " alt=" "></a>
+            </div>
+            <div class="fb-ig ">
+              <a href="https://www.instagram.com/explore/tags/%E3%81%84%E3%81%BE%E4%B8%96%E7%95%8C%E3%81%AE%E5%93%B2%E5%AD%A6%E8%80%85%E3%81%8C%E8%80%83%E3%81%88%E3%81%A6%E3%81%84%E3%82%8B%E3%81%93%E3%81%A8/?hl=ja "><img src="img/ig-logo.png
+                  " height="33 " width="33 " alt=" "></a>
+            </div>
+            <!-- フェイスブック・インスタグラム終わり -->
+        </ul>
+      </nav>
+      <!-- ハンバーガーアイコン終了ー -->
+
+      <!-- ロゴアイコン -->
+      <div class="logo-nav-wrapper ">
+        <div class="logo ">
+          <a href="index.html ">
+            <img src=" img/tetsugaku.jpg " width="44 " height="44 " alt="logo "></a>
+        </div>
+        <!-- ロゴアイコン -->
+      </div>
+    </nav>
+  </header>
+
+  <h1>哲学の歴史</h1>
+
+  <section class="philosophy ">
+
+    <!-- <h1>哲学の歴史</h1> -->
+
+    <div id="jump-whatsphilosophy-wrapper" class="jump-whatsphilosophy-wrapper">
+
+      <!-- jump -->
+      <section class="jump-wrapper ">
+        <p class="jump-text icon ">タッチして項目へジャンプ</p>
+        <nav class="jump ">
+
+          <ul class="inside-jump ">
+            <li> <a href="#kant ">カント説明</a></li>
+            <li>
+              <a href="#slider">カント動画</a>
+            </li>
+            <li> <a href="#nietzche ">ニーチェ説明</a></li>
+            <li>
+              <a href="#slider">ニーチェ動画</a>
+            </li>
+            <li> <a href="#decartes ">デカルテ説明</a></li>
+            <li>
+              <a href="#slider">デカルテ動画</a>
+            </li>
+            <li>
+              <a href="#stuarte ">スチュワ説明</a>
+            </li>
+            <li>
+              <a href="#slider">スチュワ動画</a>
+            </li>
+            <li> <a href="#locke ">ロック説明</a> </li>
+            <li>
+              <a href="#slider">ロック動画</a>
+            </li>
+            <li> <a href="#rousseau ">ルソー説明</a></li>
+            <li>
+              <a href="#slider">ルソー動画</a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+
+      <!-- whatsphilosophy -->
+      <section class=" whatsphilosophy ">
+        <h2>哲学とは</h2>
+        <p>
+          哲学は、古代ギリシア以来、人が自然の驚異や人の生病老死や喜怒哀楽に出会い、生の不条理に疑問を感じるところ、至る所にあるとされて、歴史を重ねてきた。<br><br>とはいうものの、この「古代ギリシア以来」という言い方も実は西洋的、もっと細かく言えばヨーロッパ的なものであり、哲学史と呼ばれているものの、実質は西洋哲学、ヨーロッパ哲学の歴史に他ならない。
+          <br><br>しかし同時に、「西洋にあっては知による知の根拠づけとも言うべき哲学の長い伝統があり」[1]、「文明史的観点から西洋哲学を相対化することは可能であるし、<br><br>場合によって必要であるものの、ロゴス（言葉、理性）の運動を極限まで押し進めるという徹底性は他の思想伝統には見られない特質であって、安易な批判や超克こそむしろ警戒されるべきである
+        </p>
+      </section>
+
+    </div>
+
+    <hr>
+
+    <section class=aboutphilosopher>
+      <div class="aboutimgwrapper">
+        <h2 id="kant">【イマヌエル・カント】</h2>
+        <img src="img/kant.jpeg " alt=" ">
+        <div class="topjump ">
+          <a href="#about ">ページトップへ戻る</a>
+        </div>
+      </div>
+
+      <p>カントが『純粋理性批判』、『実践理性批判』、『判断力批判』の三批判書により提唱した“批判”とは、物事を根源的に“吟味”することを指します。<br><br>“批判”と聞くと、物事について厳しい意見をもったり、相手や対象の欠点や弱点をことさらにあげつらうといった印象を受けますが、カントのいう批判とは、理性・感性などの人間の諸能力を個々の経験を離れて純粋に吟味することを意味します。
+      </p>
+
+    </section>
+
+    <hr>
+
+    <section class=aboutphilosopher>
+      <div class="aboutimgwrapper">
+        <h2 id="nietzche">【フリードリヒ・ニーチェ】</h2>
+        <img src="img/nietzsche.jpg " alt=" ">
+        <div class="topjump ">
+          <a href="#about ">ページトップへ戻る</a>
+        </div>
+      </div>
+      <p>ドイツ連邦・プロイセン王国出身の哲学者、古典文献学者。現代では実存主義の代表的な思想家の一人として知られる。<br><br>古典文献学者フリードリヒ・ヴィルヘルム・リッチュル（英語版、ドイツ語版）に才能を見出され、スイスのバーゼル大学古典文献学教授となって以降はプロイセン国籍を離脱して無国籍者であった[1][2]。<br><br>辞職した後は在野の哲学者として一生を過ごした。随所にアフォリズムを用いた、巧みな散文的表現による試みには、文学的価値も認められる。
+      </p>
+    </section>
+
+    <hr>
+
+    <section class="aboutphilosopher">
+      <div class="aboutimgwrapper">
+
+        <h2 id="decartes">【ルネ・デカルテ】</h2>
+        <img src="img/decartes.jpg " alt=" ">
+        <div class="topjump ">
+          <a href="#about ">ページトップへ戻る</a>
+        </div>
+      </div>
+      <p>イギリスの哲学者。政治哲学者、経済思想家でもあり、政治哲学においては自由主義・リバタリアニズムのみならず社会民主主義の思潮にも多大な影響を与えた。<br><br>晩年は自ら社会主義者を名乗っている。倫理学においてはベンサムの唱えた功利主義の擁護者として知られる他、論理学分野においてはバートランド・ラッセルら後続の分析哲学にも強い影響を与え、初期科学哲学の重要な哲学者として知られる。
+      </p>
+    </section>
+
+    <hr>
+
+    <section class="aboutphilosopher">
+      <div class="aboutimgwrapper">
+
+        <h2 id="stuarte">【ジョン・スチュアート・ミル】</h2>
+        <img src="img/stuarte.jpg " alt=" ">
+        <div class="topjump ">
+          <a href="#about ">ページトップへ戻る</a>
+        </div>
+      </div>
+
+      <p>イギリスの哲学者。政治哲学者、経済思想家でもあり、政治哲学においては自由主義・リバタリアニズムのみならず社会民主主義の思潮にも多大な影響を与えた。<br><br>晩年は自ら社会主義者を名乗っている。倫理学においてはベンサムの唱えた功利主義の擁護者として知られる他、論理学分野においてはバートランド・ラッセルら後続の分析哲学にも強い影響を与え、初期科学哲学の重要な哲学者として知られる。
+      </p>
+    </section>
+
+    <hr>
+
+    <section class="aboutphilosopher">
+      <div class="aboutimgwrapper">
+
+        <h2 id="locke">【ジョン・ロック】</h2>
+        <img src="img/locke.jpg " alt=" ">
+        <div class="topjump ">
+          <a href="#about ">ページトップへ戻る</a>
+        </div>
+      </div>
+
+      <p>哲学者としては、イギリス経験論の父と呼ばれ、主著『人間悟性論』（『人間知性論』）において経験論的認識論を体系化した。
+        <br><br>また、「自由主義の父」とも呼ばれ[2][3][4]、政治哲学者としての側面も非常に有名である。<br><br>『統治二論』などにおける彼の政治思想は名誉革命を理論的に正当化するものとなり、その中で示された社会契約や抵抗権についての考えはアメリカ独立宣言、フランス人権宣言に大きな影響を与えた。 </p>
+    </section>
+
+    <hr>
+
+    <section class="aboutphilosopher">
+      <div class="aboutimgwrapper">
+
+        <h2 id="rousseau">【ジャン＝ジャック・ルソー】</h2>
+        <img src="img/rousseau.jpg " alt=" ">
+        <div class="topjump ">
+          <a href="#about ">ページトップへ戻る</a>
+        </div>
+      </div>
+
+      <p>ルソーは、『人間不平等起源論』の続編として国家形成の理想像を提示しようとする。ホッブスやロックから「社会契約」という概念を継承しながら、さまざまな人々が社会契約に参加して国家を形成するとした[75]。<br><br>そのうえで、人々の闘争状態を乗り越え、さらに自由で平等な市民として共同体を形成できるよう、社会契約の形式を示した[76]。<br><br>まず、社会契約にあたっては「各構成員の身体と財産を、共同の力のすべてを挙げて守り保護するような、結合の一形式を見出すこと。
+      </p>
+    </section>
+  </section>
+
+  <section id="youtube" class=" youtube ">
+
+
+
+
+    <!-- スライダー -->
+    <div class="wrapper-txt-slider ">
+      <div class="txt-slider ">
+        <h2>【動画の順序】</h2>
+        <ol>
+          <li>カント</li>
+          <li>ニーチェ</li>
+          <li>デカルト</li>
+          <li>スチュワート</li>
+          <li>ロック</li>
+          <li>ルソー</li>
+        </ol>
+        <!-- <img src="img/immanuel-kant-02.gif" width="200" height="200" alt=""> -->
+        <div class="topjump ">
+          <a href="#about ">ページトップへ戻る</a>
+        </div>
+      </div>
+      <div class="slider ">
+
+        <!-- ①カントの動画 -->
+        <div id="slider" class="wrapper-youtube ">
+          <div class="kant ">エマヌエル・カントの哲学</div>
+          <iframe width="280 " height="157 " src=" https://www.youtube.com/embed/k9k2Iv2iswY?wmode=transparent " frameborder="0 " allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture " frameborder="0
+          " allowfullscreen wmode="Opaque "></iframe>
+        </div>
+        <!-- ②ニーチェの動画 -->
+        <div class="wrapper-youtube ">
+          <div class="nietzche ">ニーチェの哲学</div>
+          <iframe width="280 " height="157 " src="https://www.youtube.com/embed/SCJXxslPx3s?wmode=transparent " frameborder="0 " allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture " frameborder="0
+          " allowfullscreen wmode="Opaque "></iframe>
+        </div>
+        <!-- ③デカルトの動画 -->
+        <div class="wrapper-youtube ">
+          <div class="dekarte ">デカルトの哲学</div>
+          <iframe width="280" height="157" src="https://www.youtube.com/embed/BOeGATTho_0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <!-- ④スチュアートの動画 -->
+        <div class="wrapper-youtube ">
+          <div class="stuart ">スチュアートの哲学</div>
+          <iframe width="280" height="157" src="https://www.youtube.com/embed/Q3U0BB2o1M0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <!-- ⑤ロックの動画 -->
+        <div class="wrapper-youtube ">
+          <div class="locke ">ロックの哲学</div>
+          <iframe width="280" height="157" src="https://www.youtube.com/embed/zCpsRz8btlc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <!-- ⑥ルソーの動画 -->
+        <div class="wrapper-youtube ">
+          <div class="rousseau ">ルソーの哲学</div>
+          <iframe width="280" height="157" src="https://www.youtube.com/embed/S3KcZKRmNDw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+    </div>
+  </section>
+  <!-- sectionyoutube終了 -->
+
+
+  <!-- // Initialize the slider -->
+  <script>
+    $(document).ready(function() {
+      $('.slider').bxSlider();
+    });
+  </script>
+
+
+  <footer>
+    <p><small>&copy;philisophyfever.LLC</small></p>
+  </footer>
+  <!-- js外部シート読み込み -->
+  <script src="js/script.js "></script>
+</body>
+
+</html>

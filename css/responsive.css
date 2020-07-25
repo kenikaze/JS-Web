@@ -1,0 +1,295 @@
+/* タブレット & デスクトップ共通
+width=500px　以上 */
+
+@media screen and (min-width: 500px) {
+  /* about　哲学の歴史 */
+  /* 全体のwidthを700pxにする */
+  #about section.philosophy {
+    width: 700px;
+  }
+  /* flexbox 哲学者とその説明*/
+  .aboutphilosopher {
+    display: flex;
+    flex-direction: row;
+    margin: 25px 0;
+  }
+  .aboutphilosopher p {
+    padding-top: 7%;
+  }
+  /* 偶数の哲学者説明のsectionを左右
+写真と説明をリバースする */
+  .aboutphilosopher:nth-of-type(even) {
+    flex-direction: row-reverse;
+  }
+  /* 哲学者の写真の横幅を300pxにする */
+  .aboutphilosopher img {
+    width: 300px;
+    display: block;
+    margin: 0 25px;
+  }
+  /* youtubeと左のtxtの
+flexbox */
+  #about .wrapper-txt-slider {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* margin: 0 auto; */
+    text-align: center;
+    padding-top: 30px;
+    margin: 0 auto;
+  }
+  /* youtubeボックスのwidth幅 */
+  #about .bx-wrapper {
+    width: 500px;
+  }
+  /* フォーム form
+フォーム全体をを中央に寄せる*/
+  #form .wrap-legend {
+    margin-left: 30%;
+  }
+  /* formの幅730px */
+  #form form {
+    width: 730px;
+    margin: 0 auto;
+  }
+  /* １～3番目のhr を消す*/
+  .wrap-legend hr:nth-of-type(1),
+  .wrap-legend hr:nth-of-type(2),
+  .wrap-legend hr:nth-of-type(3) {
+    display: none;
+  }
+  /* チェックボックスと男女を一列にする */
+  .gender-legend{
+    display:flex;
+  }
+  .gender{margin-left: 5px;}
+}
+
+
+/* ---------------------------------- */
+
+
+/* タブレット用サイズ
+width=500px　以上
+width=1200px　以下 */
+
+@media screen and (min-width: 500px) and (max-width: 1200px) {
+  /* デスクトップ用のスライダー 非表示*/
+  #slider00 {
+    display: none;
+  }
+  /* index.html ホームのh1
+フォントサイズ調整
+マージン調整 */
+  #home h1 {
+    font-size: 28px;
+    margin: 0;
+  }
+  /* index.html　哲学者と入会キャンペーン
+flexbox調整
+中央寄せ*/
+  section.img,
+  section.campaign {
+    margin: 0 auto;
+  }
+  /* index.html　facebookと新着情報
+flexbox調整
+中央寄せ*/
+  #home .facebook,
+  .whatsnew {
+    margin: 0 auto;
+  }
+  /* 哲学者と入会キャンペーン
+facebookと新着情報
+flexbox適用 */
+  #title-img-campaign-wrapper,
+  #facebook-whatsnew-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 730px;
+    margin: 0 auto;
+  }
+  /* .title-img-campaign-wrapper,
+  .facebook-whatsnew-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 730px;
+    margin: 0 auto;
+  } */
+  #about .wrapper-txt-slider {
+    width: 700px;
+  }
+  /* youtube背景下黒で埋める */
+  .wrapper-youtube {
+    padding-bottom: 40px;
+  }
+  /* iframeのサイズ調整 */
+  #about iframe {
+    width: 400px;
+    height: 224.3px;
+  }
+  #form form {
+    text-align: center;
+  }
+}
+
+
+/* ---------------------------------- */
+
+
+/* デスクトップ用サイズ
+width=1200px以上*/
+
+@media screen and (min-width: 1200px) {
+  /* 共通開始 */
+  /*モバイル＆タブレット用の
+  ハンバーガーアイコンとナビゲーション
+  を非表示 */
+  #hamburger-nav {
+    display: none;
+  }
+  /* デスクトップ用のナビメニュー
+  flexbox（ロゴlogoを含む） */
+  #desktop-nav {
+    display: flex;
+    justify-content: center;
+  }
+  /* ヘッダーの高さを66pxから88pxに上げる */
+  header {
+    height: 88px
+  }
+  h1 {
+    font-size: 32px;
+    margin-top: 22px;
+  }
+  /* ロゴの位置（高さ）調整 */
+  #logo {
+    padding-top: 33px;
+  }
+  /* ロゴにborder-radius */
+  #logo img {
+    border-radius: 5px;
+  }
+  /* ナビにflexboxかける
+  高さも88px headerと合わせる*/
+  nav.global-nav ul.parent-nav {
+    display: flex;
+    margin: 0 auto;
+    height: 88px;
+    padding: 0;
+    vertical-align: middle;
+  }
+  /* ナビ子要素の
+  幅、フォント、位置調整 */
+  nav.global-nav ul li {
+    list-style: none;
+    width: 200px;
+    font-size: 18px;
+    padding: 28.5px 0 22px;
+  }
+  nav.global-nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: aliceblue;
+    padding: 0 5px;
+    border-radius: 10px;
+    text-align: center;
+    /* box-shadow: 0 0 3px 0 rgba(0, 0, 0, .48), 0 2px 3px 0 rgba(0, 0, 0, .22);
+    transition: .3s; */
+  }
+  nav.global-nav ul li:first-child {
+    display: block;
+    width: 50px;
+    margin-right: 80px;
+  }
+  /* ナビのhover時boxshadow */
+  nav.global-nav ul li a:hover {
+    color: darksalmon;
+    cursor: pointer;
+    box-shadow: 0 15px 30px -5px rgba(0, 0, 0, .30), 0 0 5px rgba(0, 0, 0, .1);
+    transform: translateY(-4px);
+    border-bottom: 1px aliceblue solid;
+  }
+  /* ドローワーメニュー（控え） */
+  /* .global-nav li li {
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  .global-nav li:hover>ul>li {
+    height: 1rem;
+    width: 200px;
+    overflow: visible;
+  }
+  .child-nav li a {
+    height: 35px;
+    line-height: 35px;
+    background-color: rgba(0, 0, 0, .9);
+  } */
+  /* 共通終了 */
+  /* モバイル・タブレット用のスライダー 非表示*/
+  /* ---------------------------------- */
+  /* index.html開始 */
+  /* モバイル・タブレット用のスライダーを非表示にする */
+  #slider0 {
+    display: none;
+  }
+  /* index.html　のh1（タイトル）
+  フォントサイズ調整
+  margin調整 */
+  #home hr {
+    display: none;
+  }
+  .wrapper-txt-slider {
+    border: none;
+  }
+  /* flexbox
+  幅730pxナビと合わせてる*/
+  #title-img-campaign-wrapper,
+  #facebook-whatsnew-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 730px;
+    margin: 0 auto;
+  }
+  /* .title-img-campaign-wrapper,
+  .facebook-whatsnew-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 730px;
+    margin: 0 auto;
+  } */
+  /* flexで右にはみ出た分調整 */
+  #home section.campaign,
+  #home section.whatsnew {
+    margin-right: 60px;
+  }
+  /* index.html終了 */
+  /* about.html開始 */
+  #about .wrapper-txt-slider {
+    width: 630px;
+  }
+  /* youtubeの位置（高さ）調整 */
+  #youtube .bx-wrapper {
+    margin-top: 25px;
+  }
+  /* txtの左はみ出ている分調整 */
+  #youtube .txt-slider {
+    margin-left: -50px;
+  }
+  /* iframeのサイズ調整 */
+  #about iframe {
+    width: 400px;
+    height: 224.3px;
+  }
+  /* about.html終了 */
+  /* form.html開始 */
+  #form hr {
+    width: 700px
+  }
+  /* form.html終了 */
+}

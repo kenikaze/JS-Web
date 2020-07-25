@@ -1,0 +1,960 @@
+  @media screen and (max-width: 1200px) {
+    /*デスクトップ用「グローバルメニュー」の非表示*/
+    #desktop-nav {
+      display: none;
+    }
+    /* デスクトップ用のindexのスライダー
+（写真2枚⇒1枚）
+の非表示 */
+    #home #slider00 {
+      display: none;
+    }
+  }
+  /* -------------------------------------------------- */
+  /* モバイルメニュー（ハンバーガーアイコン）始め */
+  /*モバイル用メニューの非表示
+通常の画面の上に被ってしまうため*/
+  
+  .nav-list {
+    display: none;
+  }
+  /* モバイル用メニューの表示（ハンバーガーアイコンをタッチし"active"クラス付与後） */
+  
+  .nav-list.active {
+    display: initial;
+  }
+  /* ----------------------------------------------------- */
+  /* ＪＡＶＡＳＣＲＩＰＴ用ハンバーガーアイコン開始 */
+  /* ハンバーガーアイコンの上の線 */
+  
+  .nav-toggle>div:nth-of-type(1) {
+    transform: translate(-50%, -5px);
+  }
+  /* ハンバーガーアイコンの下の線 */
+  
+  .nav-toggle>div:nth-of-type(3) {
+    transform: translate(-50%, 5px);
+  }
+  /* ナビメニュー・位置・高さ */
+  
+  .nav-list {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    list-style: none;
+    margin: 0;
+    padding: 60px 0 30px;
+    background: linear-gradient(to right, #000, rgba(0, 0, 0, .5));
+    text-align: center;
+    transition: 1s;
+  }
+  /* background: rgba(125, 125, 125, 0.95); */
+  /* ナビメニュー・色等 */
+  
+  .nav-list>li a {
+    display: block;
+    padding: 10px 1em;
+    text-decoration: none;
+    color: white;
+  }
+  /* ハンバーガーアイコンの箱「アクティブ」 */
+  
+  .nav-toggle.active {
+    opacity: 100%;
+  }
+  /* ハンバーガーアイコンの上線「アクティブ」 */
+  
+  .nav-toggle.active div:nth-of-type(1) {
+    transform: rotate(45deg) translate(-50%, 0px);
+    transform-origin: 0% 50%;
+  }
+  /* ハンバーガーアイコンの中央の線「アクティブ」 */
+  
+  .nav-toggle.active div:nth-of-type(2) {
+    opacity: 0;
+  }
+  /* ハンバーガーアイコンの下の線「アクティブ」 */
+  
+  .nav-toggle.active div:nth-of-type(3) {
+    transform: rotate(-45deg) translate(-50%, 0px);
+    transform-origin: 0% 50%;
+  }
+  /* ナビメニューの背景色が変わる「アクティブ」 */
+  
+  .nav-list.active {
+    opacity: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    list-style: none;
+    margin: 0;
+    padding: 60px 0 30px;
+    background: linear-gradient(to bottom, darkgray, rgba(0, 0, 0, .9));
+    text-align: center;
+    transition: 1s;
+  }
+  /* ハンバーガーアイコンの箱 */
+  
+  button.nav-toggle {
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    top: 13px;
+    left: 13px;
+    border: solid 1px aliceblue;
+    border-radius: 5px;
+    background-color: transparent;
+  }
+  /* ハンバーガーアイコンの中央の線 */
+  
+  .nav-toggle>div {
+    height: 1px;
+    background: aliceblue;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: .3s;
+  }
+  /* ＪＡＶＡＳＣＲＩＰＴ用
+ハンバーガーアイコン終了 */
+  /* ------------------------------------------ */
+  /*ハンバーガーアイコンをクリックで
+展開される
+モバイルメニュー開始 */
+  /* 横いっぱいに広げる。
+padding上下スペース */
+  
+  ul#nav-list li {
+    width: 100%;
+    font-size: 16px;
+    padding: 4px 0;
+  }
+  /* モバイルメニューボタン（哲学の歴史、ブログ、フォーム）
+のデフォルトスタイリングを除去し、ラベル要素と同化 */
+  
+  ul.parent-nav label button {
+    background-color: transparent;
+    color: aliceblue;
+    box-shadow: none;
+    outline: none;
+    padding: 0 0 0 15%;
+    border: none;
+    width: 85%;
+    height: 50px;
+  }
+  
+  i {
+    padding-top: 20px;
+    height: 30px;
+    width: 15%;
+  }
+  
+  ul.parent-nav label {
+    display: block;
+    text-decoration: none;
+    padding: 0;
+    border-radius: 10px;
+    color: aliceblue;
+    text-align: center;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, .48), 0 2px 3px 0 rgba(0, 0, 0, .22);
+  }
+  /*ハンバーガーアイコンをクリックで
+展開される
+モバイルメニュー開始 */
+  /* --------------------------- */
+  /* モバイルメニューのamazing font "v"
+をクリックで展開される
+ドローワーメニュー開始 */
+  /* ドローワーメニュー
+padding上下radius */
+  
+  ul.parent-nav li a {
+    padding: 5px 0;
+    border-radius: 10px;
+  }
+  /* ドローワーメニュー非表示（input "checked"されるまで) */
+  
+  ul#nav-list li ul.child-nav {
+    overflow: hidden;
+    height: 0;
+    padding: 0 1rem;
+    transition: 0.2s;
+    list-style: none;
+    margin: 0;
+  }
+  /* チェックボックスの位置右端へ
+チェックボックスを非表示*/
+  
+  ul#nav-list li input {
+    display: block;
+    height: 0;
+    overflow: hidden;
+    /* visibility: hidden; */
+  }
+  /* ドローワーメニュー表示
+button要素が押され、JS機能で（input "checked"される) */
+  
+  ul#nav-list li input:checked+ul.child-nav {
+    line-height: 1.5;
+    padding: 1rem 1rem;
+    height: 100%;
+  }
+  /* ドローワーメニューのスタイリング
+背景の色黒を薄く */
+  
+  ul#nav-list li li a {
+    background-color: rgba(0, 0, 0, .3);
+  }
+  /* モバイルメニューのamazing font "v"
+をクリックで展開される
+ドローワーメニュー終了 */
+  /* ------------------------------------- */
+  /* 全ページ共通 開始*/
+  /* ボディbody上にpaddng-top 66px
+headerがfixedで浮いてるため調整*/
+  
+  body {
+    background-image: url(../img/darkwood.jpg);
+    background-repeat: repeat;
+    color: aliceblue;
+    font-family: "Sawarabi Mincho";
+    padding-top: 66px;
+  }
+  /*（モバイル用）ヘッダーここから
+幅500px以上の場合、responsive cssでdisplay:none　にしている*/
+  /* ヘッダー header fixed  height 66px*/
+  
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 66px;
+    width: 100%;
+    border: none;
+    background: linear-gradient(to right, #000, rgba(0, 0, 0, .5));
+    z-index: 1;
+  }
+  
+  .logo-nav-wrapper {
+    height: 44px;
+    line-height: 44px;
+    width: 375px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding: 22px 0;
+  }
+  /* 哲学ロゴの位置を左右「中央」に
+marginトップを修正*/
+  
+  .logo {
+    margin: -11px auto 0;
+  }
+  /* ロゴの写真スタリング */
+  
+  .logo-nav-wrapper .logo img {
+    border-radius: 15%;
+    border: rgba(0, 0, 0, .9) solid 1px;
+  }
+  /* fb-ig */
+  
+  .fb-ig-logo {
+    /* display: flex; */
+    justify-content: center;
+    text-align: center;
+    line-height: 56px;
+  }
+  
+  .fb-ig {
+    width: 56px;
+    margin: 0 auto;
+  }
+  
+  .fb-ig img {
+    vertical-align: middle;
+    /* box-shadow: 0 0 3px 0 rgba(0, 0, 0, .48), 0 2px 3px 0 rgba(0, 0, 0, .22); */
+    border: 1px rgb(19, 110, 190) solid;
+    border-radius: 50%;
+  }
+  /*ヘッダーheader終了*/
+  /* フッター footer開始 */
+  /* ヘッダーと高さを合せている＝66px
+width=100% */
+  
+  footer {
+    height: 66px;
+    width: 100%;
+    border: none;
+    background: linear-gradient(to left, #000, rgba(0, 0, 0, .5));
+    z-index: 1;
+  }
+  
+  footer p {
+    text-align: center;
+    padding-top: 22px;
+  }
+  /* フッター footer終了 */
+  /* 全ページ共通 終了*/
+  /* ------------------------------------------ */
+  /* メイン画面 インデックスindex.html開始 */
+  
+  #home .bx-wrapper {
+    border: 0;
+  }
+  
+  #home .wrapper-photo {
+    background-color: darkslategray;
+  }
+  
+  #home .wrapper-photo img {
+    /* display: block;
+text-align: center; */
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  #slider0.wrapper-txt-slider {
+    border: none;
+  }
+  /* ------------------------------------- */
+  /* h1にスタイリングが効かないことがある
+ヘッダーの裏に隠れているためか？ */
+  
+  h1 {
+    font-size: 24px;
+    text-align: center;
+    color: #FF9872;
+    background-color: darkslategrey;
+    margin: 0;
+  }
+  /* class="img"　哲学者ラッパー開始
+imgのtxtサブタイトル */
+  
+  #home .subtitle {
+    font-size: 12px;
+    text-align: center;
+  }
+  /* フレックスボックスで並べる */
+  
+  #home .img {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0 0 15px 0;
+    width: 260px;
+    border-radius: 50px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, .48), 0 2px 3px 0 rgba(0, 0, 0, .22);
+    transition: .3s;
+  }
+  /* レスポンシブ用の調整
+フレックスボックスでレイアウト崩れ防止*/
+  
+  @media screen and (max-width: 500px) {
+    #home .img {
+      margin: 0 auto;
+    }
+  }
+  /* 哲学者写真を丸くする */
+  
+  #home .img img {
+    display: block;
+    margin: 15px auto;
+    text-align: center;
+    border: 2px rgb(15, 3, 3) solid;
+    border-radius: 50%;
+  }
+  /* 哲学者の img にhover⇒boxshadowがつく */
+  
+  .img img:hover {
+    box-shadow: -10px 10px 25px rgba(230, 180, 15, 0.9), 10px -10px 25px rgba(8, 131, 161, 0.9);
+  }
+  /* 哲学者の img中央寄せ */
+  
+  .picture {
+    text-align: center;
+  }
+  
+  .picture a {
+    text-decoration: none;
+  }
+  /* スチュアート背景が透明のため
+aliceblue入れる */
+  
+  .stuart img {
+    background-color: aliceblue;
+  }
+  /* 哲学者6名 txt 名前 */
+  
+  span.txt {
+    font-size: 12px;
+    display: block;
+    text-align: center;
+    margin: 0;
+    color: aliceblue;
+  }
+  
+  span.a {
+    list-style: none;
+  }
+  /* 哲学者の txt にhover⇒boxshadowがつく */
+  
+  span.txt:hover {
+    color: rgba(230, 180, 15, 0.9);
+    cursor: pointer;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+    width: 64px;
+    border-radius: 50px;
+  }
+  /* class="img"　哲学者ラッパー終了 */
+  /* 哲学塾入会キャンペーン開始 */
+  
+  #home section.campaign {
+    width: 228px;
+    border: 1px solid black;
+    border-radius: 50px;
+    padding: 20px;
+    background-color: rgba(51, 5, 5, .7);
+  }
+  /* キャンペーン　調整　フレックスボックス */
+  
+  @media screen and (max-width: 500px) {
+    #home section.campaign {
+      margin: 20px auto;
+    }
+  }
+  /* 哲学塾
+入会キャンペーン実施中 */
+  
+  #home section.campaign h3 {
+    text-align: center;
+    margin-top: 0;
+    font-size: 90%;
+  }
+  /*入会費・月会費*/
+  
+  .price {
+    text-align: center;
+    padding: 5px;
+    margin: 0 auto;
+    width: 228px;
+    font-size: 90%;
+  }
+  /* 今なら入会費無料 */
+  
+  .freetojoin {
+    text-align: center;
+    padding: 5px;
+    border: 2px solid wheat;
+    border-radius: 5px;
+    margin: 20px auto 20px;
+    width: 200px;
+    background-color: darkgray;
+  }
+  /* お申込みはこちら joinnowarea>joinnow */
+  
+  #home .joinnowarea {
+    width: 228px;
+  }
+  
+  .joinnowarea a {
+    text-align: center;
+  }
+  
+  #home .joinnow {
+    /* display: block; */
+    border: 0;
+    /* margin: 0 auto; */
+    background-color: transparent;
+    width: 200px;
+    text-align: center;
+  }
+  /* 哲学塾入会キャンペーン終了*/
+  /* index facebook　フェイスブック開始 */
+  
+  section.facebook {
+    text-align: center;
+  }
+  /* index facebook　フェイスブック終了 */
+  /* whatsnew開始
+フレームの中の背景色*/
+  /* whatsnew.htmlの中のid="news" */
+  
+  #news p {
+    color: aliceblue;
+  }
+  
+  #home iframe {
+    background-color: lightgrey;
+    color: aliceblue;
+    border: 2px darkgray solid;
+    border-radius: 5px;
+  }
+  
+  section.whatsnew {
+    text-align: center;
+  }
+  /* whatsnew終了
+フレームの中の背景色*/
+  
+  #home h3 {
+    color: #FF9872
+  }
+  /* メイン画面 インデックスindex.html終了 */
+  /* ------------------------------------------ */
+  /* about.html　哲学の歴史開始 */
+  /* 哲学の歴史-about */
+  
+  @media screen and (max-width: 500px) {
+    section.philosophy {
+      width: 280px;
+      margin: 0px auto 50px;
+    }
+    #about h1 {
+      margin: 0 auto 20px;
+    }
+  }
+  
+  #about h2 {
+    font-size: 20px;
+  }
+  
+  #about .philosophy img {
+    width: 275px;
+    height: auto;
+    border-radius: 50px;
+    border: 5px solid black;
+  }
+  
+  .wrapper-txt-slider {
+    border: 1px orange solid;
+    border-left: none;
+    border-right: none;
+  }
+  
+  .jump-wrapper {
+    border: 1px dashed aliceblue;
+    border-radius: 5px;
+  }
+  
+  .jump ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: left;
+    list-style: none;
+    padding: 20px;
+    font-size: 16px;
+  }
+  
+  .icon {
+    color: #FFC7AF;
+  }
+  
+  ul.inside-jump li a:hover {
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    color: #FFC7AF;
+  }
+  
+  ul.inside-jump li:nth-of-type(even) {
+    font-weight: bold;
+  }
+  
+  .jump ul li a {
+    padding: 20px 20px 0 0;
+    display: block;
+    color: #FFC7AF;
+    list-style: none;
+  }
+  
+  .jump-text {
+    margin: 20px 0 0 0;
+  }
+  
+  .icon:before {
+    content: "";
+    padding-right: 10px;
+    border-left: 7px solid #FFC7AF;
+  }
+  
+  ul.inside-jump {
+    margin: 0 auto 20px;
+    padding: 0 1px 0 20px;
+  }
+  
+  ul .inside-jump li a {
+    border: #FFC7AF;
+  }
+  
+  section.philosophy {
+    margin: 0 auto;
+  }
+  
+  section.philosophy h2,
+  .topjump {
+    list-style: none;
+    padding: 20px 0px;
+    text-align: center;
+  }
+  
+  #about h2 {
+    color: #FF9872;
+  }
+  
+  .topjump a {
+    /* display: block; */
+    color: #FFC7AF;
+    margin: 0 auto;
+    font-size: 16px;
+  }
+  /* YOUTUBE欄 */
+  /* youtube枠
+flexbox用 */
+  
+  .wrapper-youtube {
+    margin: 0;
+  }
+  /* youtube iframeの背景を黒くする */
+  
+  #about .wrapper-youtube {
+    background-color: black;
+  }
+  /* youtubeの背景を裏に回す */
+  
+  #about iframe {
+    z-index: -500;
+  }
+  /* flexboxレイアウト崩れ防止の調整 */
+  
+  @media screen and (max-width:500px) {
+    section.youtube {
+      margin: 60px auto;
+      text-align: center;
+      width: 290px;
+    }
+  }
+  /* youtubeのタイトル */
+  
+  .youtube h2 {
+    font-weight: normal;
+    font-size: 8px;
+  }
+  /* youtubeのフレーム iframe
+radiusは外した*/
+  
+  iframe {
+    border: 5px solid black;
+    /* border-radius: 50px; */
+    text-align: center;
+    /* background-color: gray; */
+  }
+  /* about.html　哲学の歴史　終了 */
+  /* ------------------------------------- */
+  /* フォーム form 開始*/
+  /* レスポンシブ対応時、widthを外す */
+  /* 調整　必須 */
+  .required8{margin-left: -1px;}
+  @media screen and (max-width:500px) {
+    form {
+      width: 70%;
+      margin: 0 auto;
+      padding-top: 25px;
+      padding-bottom: 23.4px;
+      /* background: linear-gradient(to bottom, darkgray, rgba(0, 0, 0, .5)); */
+      font-size: 90%;
+    }
+  }
+  /* 全体のform枠中央寄せ */
+  
+  .wrap-legend {
+    margin: 0 auto;
+  }
+  /*一旦全体の文字色をオレンジにする */
+  
+  #form form {
+    color: orange;
+  }
+  
+  #form form h2 {
+    text-align: center;
+    color: orange;
+  }
+  /* 入会フォームの箇所の文字色をaliceblueに変える */
+  
+  #form .wrap-legend {
+    color: aliceblue;
+  }
+  /* input間にmargin-bottom=10px かける */
+  
+  #form legend {
+    margin-bottom: 10px;
+  }
+  /* 入会目的の縦幅のサイズ調整
+input 要素とデフォルトの縦幅が異なるため*/
+  
+  #form select {
+    font-size: 80%;
+    height: 1.8em;
+    border-radius: 5px;
+  }
+  /* 入会目的の選択してくださいを
+グレーでマークする
+選択できないという印として*/
+  
+  option:first-child {
+    background: darkgray;
+  }
+  /* 必須と自動のborder-radius */
+  
+  .required,
+  .auto {
+    border-radius: 5px;
+  }
+  /* 必須　のスタイリング */
+  
+  .required small {
+    background-color: pink;
+    font-size: 12px;
+    vertical-align: middle;
+    border-radius: 5px;
+    padding: 2px;
+    margin: 0 5px;
+    color: red;
+  }
+  /* 自動　のスタイリング */
+  
+  .auto small {
+    background-color: skyblue;
+    font-size: 12px;
+    vertical-align: middle;
+    border-radius: 5px;
+    padding: 2px;
+    margin: 0 5px;
+  }
+  /* フォーム form のラベル
+都道府県とか姓、名とか
+左寄せ
+inline-block*/
+  
+  label.form-label {
+    display: inline-block;
+    text-align: left;
+    width: 90px;
+  }
+  /* formのinput */
+  
+  #form input {
+    margin: 5px 0;
+    border-radius: 5px;
+  }
+  
+  @media screen and (max-width: 500px) {
+    form input {
+      display: block;
+    }
+    #form .gender {
+      display: flex;
+    }
+    .wrap-legend {
+      margin: 0 auto;
+    }
+    legend{
+      width: 300px;
+    }
+    .man,
+    .woman {
+      margin: 0 25px 0 8px;
+    }
+    #form select {
+      display: block;
+    }
+    #form .checkbox {
+      display: inline;
+    }
+    .wrapper-gender-label{
+      width: 300px;
+    }
+      /* form 必須　調整 */
+  #form .wrapper-gender-label{
+    width: 300px;
+  }
+  }
+  /* formのinput
+姓、名、姓カナ、名カナ
+*/
+  
+  #form input.name {
+    width: 150px;
+  }
+
+  /* 郵便番号の検索ボタンの色 */
+  
+  button.search-address {
+    background: #DCEDC8;
+    border-radius: 5px;
+  }
+  /*規約の内容　文字色 */
+  
+  .cram-school a {
+    color: orange;
+  }
+  /* 送信ボタン
+中央寄せ */
+  
+  .submit {
+    text-align: center;
+    margin-top: 15px;
+  }
+  /* 送信ボタン背景色 */
+  
+  .submit input {
+    background: #DCEDC8;
+    border-radius: 5px;
+  }
+  /* フォーム form 終了*/
+  /* 以下ローディング */
+  /* ローディングコンテンツ.box */
+  /* アニメーションの元となる.spinner要素 */
+  
+  .spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    width: 120px;
+    height: 120px;
+  }
+  /* 1番目のアニメーションの場合 */
+  
+  .spinner.type1 {
+    border-radius: 50%;
+    border-width: 8px;
+    border-style: solid;
+    border-color: #fff rgba(255, 255, 255, 0.12) rgba(255, 255, 255, 0.12);
+    /* ローディング要素のアニメーションを指定 */
+    -webkit-animation: spinner1_1 1.5s infinite linear forwards;
+    animation: spinner1_1 1.5s infinite linear forwards;
+  }
+  
+  .spinner.type1 span {
+    /* Loading テキストのアニメーションを指定 */
+    animation: spinner_loading_text 1.5s infinite linear forwards reverse;
+  }
+  /* ローディング要素のアニメーション内容 */
+  
+  @-webkit-keyframes spinner1_1 {
+    0% {
+      -webkit-transform: translate(-50%, -50%) rotate(0);
+      transform: translate(-50%, -50%) rotate(0);
+    }
+    100% {
+      -webkit-transform: translate(-50%, -50%) rotate(360deg);
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  
+  @keyframes spinner1_1 {
+    0% {
+      -webkit-transform: translate(-50%, -50%) rotate(0);
+      transform: translate(-50%, -50%) rotate(0);
+    }
+    100% {
+      -webkit-transform: translate(-50%, -50%) rotate(360deg);
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  /* Loading テキストのアニメーション内容 */
+  
+  @-webkit-keyframes spinner_loading_text {
+    0% {
+      opacity: 1;
+      -webkit-transform: translate(-50%, -50%) rotate(0deg);
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    50% {
+      opacity: 0;
+      -webkit-transform: translate(-50%, -50%) rotate(180deg);
+      transform: translate(-50%, -50%) rotate(180deg);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translate(-50%, -50%) rotate(360deg);
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  
+  @keyframes spinner_loading_text {
+    0% {
+      opacity: 1;
+      -webkit-transform: translate(-50%, -50%) rotate(0deg);
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    50% {
+      opacity: 0;
+      -webkit-transform: translate(-50%, -50%) rotate(180deg);
+      transform: translate(-50%, -50%) rotate(180deg);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translate(-50%, -50%) rotate(360deg);
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  /* ------------spinner1-----------終了 */
+  /* .boxの表示グレースケール */
+  
+  .box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    -webkit-transition: all 1.2s ease;
+    /* 1.2秒でフェードアウト */
+    transition: all 1.2s ease;
+    color: #fff;
+    /* ローディングアニメーションカラー */
+    background-color: #333;
+    /* 背景カラー */
+  }
+  /* Loading テキスト */
+  
+  .spinner span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* -webkit-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%); */
+    font-size: 12px;
+  }
+  
+  .box .loading {
+    position: absolute;
+    top: 63%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+  }
+  /* ローディングを消すための定義 */
+  
+  .box.loaded {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- ファビコン -->
+  <link rel="shortcut icon" href="favicon.ico" />
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 文字フォント -->
+  <link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet" />
+  <!-- フォントAWSOME -->
+  <link rel=”stylesheet” href=”https://use.fontawesome.com/releases/v5.1.0/css/all.css“>
+  <!-- フォントAWSOME -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+  <!-- // Links to the libraries needed -->
+
+  <link rel="stylesheet" href="bxslider-4-4.2.12/dist/jquery.bxslider.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="bxslider-4-4.2.12/dist/jquery.bxslider.min.js"></script>
+
+  <title>哲学のウェブサイト</title>
+  <script src="https://kit.fontawesome.com/3efcf3421b.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body id="home">
+  <!-- LOADING読み込み 場所は<body>の直後か直前-->
+  <div id="my-spinner" class="box">
+    <!-- type1 〜 type8 はお好みで -->
+    <div class="spinner type1">
+      <span>Loading...</span>
+    </div>
+    <!-- <div class="loading">読み込み中です（　＾ω＾）・・・</div> -->
+  </div>
+
+  <header>
+    <!-- デスクトップサイズ用のナビ 開始-->
+    <nav class="global-nav " id="desktop-nav">
+      <ul class="parent-nav ">
+        <li class="logo" id="logo">
+          <a href="index.html ">
+            <img src=" img/tetsugaku.jpg " width="44 " height="44 " alt="logo "></a>
+        </li>
+        <li>
+          <a href="about.html">ホーム【哲学塾】</a>
+          <!-- 子要素 始まり-->
+          <!-- <ul class="child-nav ">
+            <li>
+              <a href="about.html">哲学とは</a>
+            </li>
+            <li>
+              <a href="about.html#kant">イマヌエル・カント</a>
+            </li>
+            <li>
+              <a href="about.html#nietzche">フリードリヒ・ニーチェ</a>
+            </li>
+            <li>
+              <a href="about.html#decartes">ルネ・デカルテ</a>
+            </li>
+            <li>
+              <a href="about.html#stuarte">ジョン・スチュアート・ミル</a>
+            </li>
+            <li>
+              <a href="about.html#rousseau ">ジャン＝ジャック・ルソー</a>
+            </li>
+          </ul> -->
+          <!-- 子要素終わり -->
+        </li>
+        <li>
+          <a href="https://kantphilosophy.hatenablog.com/" target="_blank">ブログ</a>
+          <!-- <ul class="child-nav ">
+            <li>
+              <a href="https://kantphilosophy.hatenablog.com/entry/2020/06/27/223745 " target="_blank">第一回</a>
+            </li>
+            <li>
+              <a href="https://kantphilosophy.hatenablog.com/entry/2020/06/27/224235 " target="_blank">第二回</a>
+            </li>
+            <li>
+              <a href="https://kantphilosophy.hatenablog.com/entry/2020/06/27/224621" target="_blank">第三回</a>
+            </li>
+            <li>
+              <a href="https://kantphilosophy.hatenablog.com/entry/2020/06/28/193323 " target="_blank">第四回</a>
+            </li>
+            <li>
+              <a href="https://kantphilosophy.hatenablog.com/entry/2020/07/03/225928 " target="_blank">第五回</a>
+            </li>
+            <li>
+              <a href="https://kantphilosophy.hatenablog.com/entry/2020/07/06/211136 " target="_blank">第六回</a>
+            </li>
+          </ul> -->
+        </li>
+        <li>
+          <a href="form.html">フォーム</a>
+          <!-- <ul class="child-nav ">
+            <li>
+              <a href="form.html">哲学塾入会申し込み</a>
+            </li> -->
+        </li>
+
+        <!-- <li class="fb-ig">
+          <a href="https://www.facebook.com/%E5%93%B2%E5%AD%A6cafe-269427913406928/" target="_blank"><img src="img/fb-logo.png" height="33" width="33" alt=""></a>
+        </li>
+
+        <li class="fb-ig">
+          <a href="https://www.instagram.com/explore/tags/%E3%81%84%E3%81%BE%E4%B8%96%E7%95%8C%E3%81%AE%E5%93%B2%E5%AD%A6%E8%80%85%E3%81%8C%E8%80%83%E3%81%88%E3%81%A6%E3%81%84%E3%82%8B%E3%81%93%E3%81%A8/?hl=ja" target="_blank"><img src="img/ig-logo.png" height="33" width="33" alt=""></a>
+        </li> -->
+
+      </ul>
+      </ul>
+    </nav>
+    <!-- デスクトップサイズ用のナビ 終了-->
+
+    <nav class="hamburger-nav" id="hamburger-nav">
+      <!-- ハンバーガーアイコン始まり -->
+      <!-- id.nav-toggle.nav-toggle -->
+      <!-- div*3 -->
+      <button type="button" id="nav-toggle" class="nav-toggle">
+            <div></div>
+            <div></div>
+            <div></div>
+        </button>
+      <!-- ナビメニュー スマホ・タブレットサイズ版限定-->
+      <!-- ul#nav-list.nav-list -->
+      <!-- li>a -->
+      <nav class="nav-list-wrapper">
+        <ul id="nav-list" class="nav-list parent-nav ">
+
+          <li>
+            <!-- 哲学の歴史始まり -->
+            <label for=""><button type="button" >哲学の歴史</button><i class="fas fa-chevron-down" id="checkbox1"></i></label>
+
+            <input type="checkbox" name="philosophy-history">
+            <!-- 子要素 始まり-->
+            <ul class="child-nav ">
+              <li>
+                <a href="about.html">哲学とは</a>
+              </li>
+              <li>
+                <a href="about.html#kant">イマヌエル・カント</a>
+              </li>
+              <li>
+                <a href="about.html#nietzche">フリードリヒ・ニーチェ</a>
+              </li>
+              <li>
+                <a href="about.html#decartes">ルネ・デカルテ</a>
+              </li>
+              <li>
+                <a href="about.html#stuarte">ジョン・スチュアート・ミル</a>
+              </li>
+              <li>
+                <a href="about.html#rousseau ">ジャン＝ジャック・ルソー</a>
+              </li>
+            </ul>
+            <!-- 子要素終わり -->
+            <!-- 哲学の歴史終わり-->
+          </li>
+          </li>
+          <!-- ブログ始まり -->
+          <li>
+            <label for=""><button type="button">ブログ</button><i class="fas fa-chevron-down" id="checkbox2"></i></label><input type="checkbox" name="blog">
+            <!-- 子要素 -->
+            <ul class="child-nav ">
+              <li>
+                <a href="https://kantphilosophy.hatenablog.com/entry/2020/06/27/223745 ">第一回</a>
+              </li>
+              <li>
+                <a href="https://kantphilosophy.hatenablog.com/entry/2020/06/27/224235 ">第二回</a>
+              </li>
+              <li>
+                <a href="https://kantphilosophy.hatenablog.com/entry/2020/06/27/224621 ">第三回</a>
+              </li>
+              <li>
+                <a href="https://kantphilosophy.hatenablog.com/entry/2020/06/28/193323 ">第四回</a>
+              </li>
+              <li>
+                <a href="https://kantphilosophy.hatenablog.com/entry/2020/07/03/225928 ">第五回</a>
+              </li>
+              <li>
+                <a href="https://kantphilosophy.hatenablog.com/entry/2020/07/06/211136 ">第六回</a>
+              </li>
+            </ul>
+            <!-- 子要素 -->
+          </li>
+
+          <!-- ブログ終わり -->
+
+          <!-- フォーム始まり -->
+          <li>
+            <label for=" "><button type="button">フォーム</button><i class="fas fa-chevron-down" id="checkbox3"></i> </label> <input type="checkbox" name="form">
+            <ul class="child-nav ">
+              <li>
+                <a href="form.html">哲学塾入会申し込み</a>
+              </li>
+
+            </ul>
+          </li>
+          <!-- フォーム終わり -->
+
+          <!-- フェイスブック・インスタグラム始まり -->
+          <div class="fb-ig-logo ">
+            <div class="fb-ig ">
+              <a href="https://www.facebook.com/%E5%93%B2%E5%AD%A6cafe-269427913406928/ "><img src="img/fb-logo.png " height="33 " width="33 " alt=" "></a>
+            </div>
+            <div class="fb-ig ">
+              <a href="https://www.instagram.com/explore/tags/%E3%81%84%E3%81%BE%E4%B8%96%E7%95%8C%E3%81%AE%E5%93%B2%E5%AD%A6%E8%80%85%E3%81%8C%E8%80%83%E3%81%88%E3%81%A6%E3%81%84%E3%82%8B%E3%81%93%E3%81%A8/?hl=ja "><img src="img/ig-logo.png
+                  " height="33 " width="33 " alt=" "></a>
+            </div>
+            <!-- フェイスブック・インスタグラム終わり -->
+        </ul>
+      </nav>
+      <!-- ハンバーガーアイコン終了ー -->
+
+      <!-- ロゴアイコン -->
+      <div class="logo-nav-wrapper ">
+        <div class="logo ">
+          <a href="index.html ">
+            <img src=" img/tetsugaku.jpg " width="44 " height="44 " alt="logo "></a>
+        </div>
+        <!-- ロゴアイコン -->
+      </div>
+    </nav>
+  </header>
+
+  <h1 class="title ">学ぶ・哲学</h1>
+
+
+  <!-- スライダー０ -->
+  <div id="slider0" class="wrapper-txt-slider ">
+
+    <div class="slider">
+      <div class="wrapper-youtube wrapper-photo">
+
+        <img src="img/greek.jpg" width="720 " height="288" alt="ギリシャ">
+        <img src="img/socrates.jpg" width="720 " height="288" alt="ソクラテス">
+
+
+      </div>
+      <div class="wrapper-youtube wrapper-photo">
+        <img src="img/germany.jpg" width="720 " height="288 " alt="スライドショー ">
+        <img src="img/Nietzsche-philosophy.jpg " width="720 " height="288 " alt="スライドショー ">
+      </div>
+
+      <div class="wrapper-youtube wrapper-photo ">
+        <img src="img/philosophy-slide.jpg" width="720 " height="288 " alt="スライドショー ">
+        <img src="img/socrates-philisophy.jpg" width="720 " height="288 " alt="スライドショー ">
+      </div>
+    </div>
+  </div>
+  <!-- スライダー00-->
+  <div id="slider00" class="wrapper-txt-slider ">
+
+    <div class="slider ">
+      <div class="wrapper-youtube wrapper-photo ">
+        <img src="img/greek.jpg " width="1440 " height="576 " alt="スライドショー ">
+      </div>
+
+      <div class="wrapper-youtube wrapper-photo ">
+        <img src="img/socrates.jpg " width="1440 " height="576 " alt="スライドショー ">
+      </div>
+
+      <div class="wrapper-youtube wrapper-photo ">
+        <img src="img/germany.jpg " width="1440 " height="576 " alt="スライドショー ">
+      </div>
+
+      <div class="wrapper-youtube wrapper-photo ">
+        <img src="img/Nietzsche-philosophy.jpg " width="1440 " height="576 " alt="スライドショー ">
+      </div>
+
+      <div class="wrapper-youtube wrapper-photo ">
+        <img src="img/philosophy-slide.jpg " width="1440 " height="576 " alt="スライドショー ">
+      </div>
+      <div class="wrapper-youtube wrapper-photo ">
+        <img src="img/socrates-philisophy.jpg " width="1440 " height="576 " alt="スライドショー ">
+      </div>
+    </div>
+  </div>
+
+
+
+  <section id="title-img-campaign-wrapper" class="title-img-campaign-wrapper">
+    <!-- title -->
+
+
+    <!-- img -->
+    <section class="img ">
+      <p class="subtitle ">哲学者のイラストを左クリックしてみよう！ <br>ユーチューバーが動画で解説してくれるよ</p>
+      <div class="picture ">
+        <a href="about.html#slider "><img src="img/immanuel-kant-02.gif " width="66px " height="66px " alt="kant ">
+          <span class="txt ">カント</span></a>
+      </div>
+
+      <div class="picture ">
+        <a href="about.html#slider "><img src="img/friedrich-nietzsche-01.gif " width="66px " height="66px " alt="nietzche ">
+          <span class="txt ">ニーチェ</span></a>
+      </div>
+
+      <div class="picture ">
+        <a href="about.html#slider "><img src="img/rene-descartes-01.gif " width="66px " height="66px " alt="decartes ">
+          <span class="txt ">デカルテ</span></a>
+      </div>
+
+      <div class="picture stuart ">
+        <a href="about.html#slider "><img src="img/john-stuart-mill-01.gif " width="66px " height="66px " alt="stuart "><span class="txt ">スチュアート</span></a>
+      </div>
+
+      <div class="picture ">
+        <a href="about.html#slider "><img src="img/john-locke-01.gif " width="66px " height="66px " alt="locke ">
+          <span class="txt ">ロック</span></a>
+      </div>
+
+      <div class="picture ">
+        <a href="about.html#slider "><img src="img/jean-jacques-rousseau-03.gif " width="66px " height="66px " alt="rousseau ">
+          <span class="txt ">ルソー</span></a>
+      </div>
+
+      </div>
+
+
+    </section>
+
+    <!-- campaign -->
+    <section class="campaign ">
+      <h3>哲学塾<br>入会キャンペーン実施中</h3>
+      <p class="price ">入会費：3,000円（税込）
+        <br>月会費：1,500円（税込）</p>
+      <p class="freetojoin ">今なら入会費無料</p>
+      <div class="joinnow ">
+        <div class="joinnowarea ">
+          <a href="form.html "><img src="img/submit200.png " alt=" "></a>
+        </div>
+    </section>
+
+  </section>
+
+
+  <section id="facebook-whatsnew-wrapper" class="facebook-whatsnew-wrapper">
+    <!-- facebook -->
+    <section class="facebook ">
+      <h3>公式facebook</h3>
+      <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2F%25E7%258F%2588%25E7%2590%25B2%25E5%2593%25B2%25E5%25AD%25A6%25E6%25B0%25B4%25E6%2588%25B8%25E5%25BA%2597-794748943953471%2F&tabs=timeline&width=260&height=390&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId "
+        width="260 " height="390 " style="border:none;overflow:hidden " scrolling="no " frameborder="0 " allowTransparency="true " allow="encrypted-media "></iframe>
+    </section>
+    <!-- whatsnew -->
+    <section class="whatsnew ">
+      <h3>新着情報</h3>
+      <iframe src="whatsnew.html " width="260 " height="390 ">
+    </iframe>
+    </section>
+
+  </section>
+
+  <footer>
+    <p><small>&copy;philisophyfever.LLC</small></p>
+  </footer>
+  <!-- // Initialize the slider -->
+  <script>
+    $(document).ready(function() {
+      $('.slider').bxSlider();
+    });
+  </script>
+  <!-- js外部シート読み込み -->
+  <script src="js/script.js "></script>
+
+</body>
+
+</html>
